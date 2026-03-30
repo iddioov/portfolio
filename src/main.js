@@ -17,6 +17,17 @@ document.addEventListener('scroll', () => {
 const home = document.querySelector('.home__container');
 const homeHeight = home.offsetHeight;
 document.addEventListener('scroll', () =>{
-    console.log(1 - window.scrollY / homeHeight);
     home.style.opacity = 1 - window.scrollY / homeHeight;
 })
+
+
+// Arrow Up버튼을 아래로 스크롤 시 투명하게 처리함
+
+const arrowup = document.querySelector('.arrow-up');
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight / 2){
+        arrowup.style.opacity = 1;
+    } else {
+        arrowup.style.opacity = 0;
+    }
+});
