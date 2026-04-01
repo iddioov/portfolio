@@ -4,7 +4,6 @@
 const header = document.querySelector(".header");
 const headerHeight = header.offsetHeight;
 document.addEventListener("scroll", () => {
-  console.log(window.scrollY);
   if (window.scrollY > headerHeight) {
     header.classList.add("header--dark");
   } else {
